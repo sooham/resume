@@ -1,0 +1,204 @@
+% resume.tex
+% The older version of this resume is stored in Overleaf for rafizsooham@gmail.com
+
+\documentclass[letterpaper,10pt]{article}
+
+%-----------------------------------------------------------
+%Margin setup
+
+\setlength{\voffset}{-0.0in}
+
+\setlength{\paperwidth}{8.5in}
+\setlength{\paperheight}{11in}
+
+\setlength{\headheight}{0in}
+\setlength{\headsep}{-0.5in}
+
+\setlength{\textheight}{12in}
+\setlength{\textheight}{9.5in}
+
+\setlength{\topmargin}{-0.30in}
+\setlength{\textwidth}{7in}
+
+\setlength{\topskip}{0in}
+
+\setlength{\oddsidemargin}{-0.25in}
+\setlength{\evensidemargin}{-0.25in}
+
+%-----------------------------------------------------------
+%\usepackage{fullpage}
+\usepackage{shading}
+\usepackage{xcolor}
+\usepackage[colorlinks = true,
+            linkcolor = blue,
+            urlcolor  = blue,
+            citecolor = blue,
+            anchorcolor = blue]{hyperref}
+%\textheight=9.0in
+\pagestyle{empty}
+\raggedbottom
+\raggedright
+\setlength{\tabcolsep}{0in}
+
+\usepackage{xeCJK}
+\setCJKmainfont{Songti SC}  % macOS Song-style font (SimSun equivalent)
+
+%-----------------------------------------------------------
+%Custom commands
+\newcommand{\resitem}[1]{\item #1 \vspace{0pt}}
+
+\newcommand{\resheading}[1]{{\textbf{\Large{#1} \vphantom{p\^{E}}}\vspace{7pt}}}
+
+\newcommand{\ressubheading}[4]{
+\begin{tabular*}{7in}{l@{\extracolsep{\fill}}r}
+		\textbf{#1} #2 & \textit{#4} \\
+\end{tabular*}\vspace{0pt}}
+
+\newcommand{\resprojectsubheading}[2]{
+\begin{tabular*}{7in}{l@{\extracolsep{\fill}}r}
+        \textbf{#1} & \textit{#2} \\
+\end{tabular*}\vspace{0pt}}
+
+\newcommand{\MYhref}[3][blue]{\href{#2}{\color{#1}{\underline{#3}}}}%
+%-----------------------------------------------------------
+
+
+
+
+
+
+
+\begin{document}
+
+\begin{tabular*}{7in}{l@{\extracolsep{\fill}}r}
+\textbf{\Huge Sooham Rafiz} & \large{+1 (647) 876-6256} \\
+        \large{Portfolio: \MYhref{https://www.soohamurai.com}{www.soohamurai.com}}  &  \large{\textbf{rafizsooham@gmail.com}} \\
+\end{tabular*}
+
+\vspace{10pt}
+
+
+\ressubheading{Career Break}{Independent Researcher and Study @ Fudan University}{}{Jul 2025 - Present}
+\begin{itemize} \vspace{-\topsep}
+\setlength{\parskip}{0pt}
+\setlength{\itemsep}{0pt}
+\resitem{Took career break following significant investment gains, enabling focus on research interests and extended stay in Shanghai, China studying Chinese and Physics.}
+\resitem{Completed performance optimization projects including cache line investigation, CUDA kernel development, and memory hierarchy profiling on Apple M4. \href{https://soohamurai.com/2026/01/31/Measuring-Cache-Hierarchy-on-Apple-M4/}{Blog post on Apple M4 cache hierarchy}}
+\resitem{Replicated and extended (Noroozizdeh et al.) paper ``Deep sequence models tend to memorize geometrically; it is unclear why.'' \href{https://github.com/sooham/pathstar-geometric-learning}{Blog post}}
+\resitem{Conducted practical research into Pathstar optimization with memmap and sorting techniques. \href{https://soohamurai.com/2025/11/09/practical-memmap-and-sort-on-pathstar/}{Blog post}}
+\resitem{Studied Advanced Mechanics and Chinese at Fudan University.}
+\resitem{Achieved HSK level 5 proficiency in Chinese. 我在复旦学中文和物理, 都是因为好奇。达到HSK五级水平。}
+\end{itemize}
+\ressubheading{Short Story (YC'19)}{Senior Software Engineer / ML Engineer}{}{Apr 2024 - Jul 2025}
+	\begin{itemize} \vspace{-\topsep}
+    \setlength{\parskip}{0pt}
+    \setlength{\itemsep}{0pt}
+    \resitem{Fine-tuned vision language model cogVLM-17B with LoRA on proprietary data, served via vLLM with Flash Attention 2 for automated fashion cataloging. Achieved F1 score of 0.861 and accuracy of 88\% on evaluation set.}
+    \resitem{Designed and deployed ShipmentEngine for tracking 100k+ shipments. Saved 1.8M USD/year in freight costs by engineering platform transition from USPS to Pitney Bowes.}
+    \resitem{Built in-house cycle-counting and data ingestion pipelines to eliminate inactive warehouse zones and improve inventory accuracy.}
+    \resitem{\textsl{\textbf{Utilized:} PyTorch, DDP, vLLM, Flash Attention, Postgres, AWS, Typescript, Python}}
+    \end{itemize}
+    \ressubheading{Amazon}{Software Development Engineer II - Payments Team}{}{December 2021 - Nov 2023}
+	\begin{itemize} \vspace{-\topsep}
+    \setlength{\parskip}{0pt}
+    \setlength{\itemsep}{0pt}
+    \resitem{Developed real-time Unpaid Time value algorithm and infrastructure for Germany, eliminating batched 3rd party vendor dependency and achieving 1000x speed improvement. Deployed to 2 million warehouse associates.}
+    \resitem{Cross-functionally led development of timesheet analysis software serving 1k daily workers in Puerto Rico Amazon Logistic Center.}
+    \resitem{\textsl{\textbf{Utilized:} Python, Java, AWS ECS, AWS DDB, Lambda, CloudWatch, Cloudformation, CDK}}
+     \end{itemize}
+\ressubheading{Qualcomm}{Machine Learning Acceleration Engineer}{}{July 2019 - August 2021}
+	\begin{itemize} \vspace{-\topsep}
+    \setlength{\parskip}{0pt}
+    \setlength{\itemsep}{0pt}
+    \resitem{Built a graph compiler to lower computational graphs to ONNX, implementing kernel fusion passes for matmul and batchnorm targeting Qualcomm Adreno GPU and Hexagon DSP.}
+    \resitem{Implemented a static quantization library supporting INT8 and INT16 precision with activation-aware quantization for SnapDragon Neural Processor firmware.}
+    \resitem{Developed end-to-end CI/CD ML test pipeline and performance dashboard profiling timing, memory footprint, and quantization error across 100+ vision model families (Inceptionv3, MobileNet, YOLO) on multiple hardware targets.}
+    \resitem{Reduced memory footprint of compiled binaries for common operators such as Convolution and Argmax.}
+    \resitem{\textsl{\textbf{Utilized:} C, Python, PyTorch, ONNX, Qualcomm Hexagon SDK, MLIR}}
+    \end{itemize}
+    
+
+        \ressubheading{Intel Corporation}{Deep Learning Acceleration Engineer (Intern)}{}{Jun 2018 - Aug 2018}
+	\begin{itemize} \vspace{-\topsep}
+    \setlength{\parskip}{0pt}
+    \setlength{\itemsep}{0pt plus 1pt}
+        \resitem{Reduced OpenVINO (a deep learning framework) compile time for CNN models by upto 24 hours using caching optimizations.}
+    \resitem{Reduced compile time for building deep convolutional models in regression tests by caching intermediary C object files, libaries and configurations to a Python server, decreasing test time by 16 hours and improving test repeatability.}
+    \resitem{Migrated Intel's deep learning framework used by 50+ developers across backwards incompatible updates to development and production environment, sustaining team productivity.}
+    \resitem{\textsl{\textbf{Utilized:}  C++, Python, OpenVINO, OpenCL }}
+	\end{itemize}
+
+
+    \ressubheading{Intel Corporation}{FPGA Development Engineer (Intern)}{}{Jun 2017 - May 2018}
+	\begin{itemize} \vspace{-\topsep}
+    \setlength{\parskip}{0pt}
+    \setlength{\itemsep}{0pt plus 1pt}
+	%\resitem{Developer for FPGA LDPC codec compatible with 3rd Generation Partnership Project (3GPP) standard of 5G cellular communication.}
+	%\resitem{Developed the library for packaging, Quartus synthesis integrations, and user interface for aforementioned LDPC module.}
+            \resitem{Created a comprehensive user interface and packaging system using Perl and Tcl, allowing parameter customization, code encryption and code generation. Used in production by multiple customers.}
+    \resitem{Built a C++ client and server to query field-programmable gate array (FPGA) registers. This was accomplished by sending Direct Memory Access and Memory Mapped IO requests to FPGA workstations.}
+	\resitem{Added FPGA hardware support to Intel's digital signal library by implementing C++ middleware.}
+	%\resitem{Improved FPGA IP user documentation through meetings with customers and technical editors.}
+	%\resitem{Revised user documentation based on feedback from customers, leading to increased software usability.}
+	%\resitem{Programmed an embedded serial command interface and memory peek/poke utilities.}
+
+    \resitem{\textsl{\textbf{Utilized:}  C++, Perl, Tcl, Quartus, Verilog}}
+	\end{itemize}
+
+    %\ressubheading{Careerleaf Inc.}{}{Web Developer (Intern)}{Jun 2016 - Sep 2016}
+	%\begin{itemize} \vspace{-\topsep}
+    %\setlength{\parskip}{0pt}
+    %\setlength{\itemsep}{0pt plus 1pt}
+	%\resitem{Developed a job management and job listing module using AngularJS and Python backend, satisfying multiple client demands.}
+    %\resitem{Reduced redundancy of SQL database by converting schema to Boyce-Codd Normal Form, reducing database size by 80,0000 entries.}
+	%\resitem{Worked with a development team using SCRUM software development framework.}
+	%\end{itemize}
+    %\ressubheading{University of Toronto Aerospace Team}{Toronto, ON}{Avionics Engineer (Club member)}{Sep 2016 - May 2017}
+	%\begin{itemize} \vspace{-\topsep}
+    %\setlength{\parskip}{0pt}
+    %\setlength{\itemsep}{0pt plus 1pt}
+
+	%\resitem{Provided accurate estimation of altitude of rocket nose-cone by implementing a Kalman filter algorithm.}
+	%\resitem{Programmed control software to communicate between ground station and the rocket.}
+	%\resitem{Helped fellow team-members perform cold-flow and firing tests of the rocket motor.}
+    %\resitem{\textsl{\textbf{Utilized:} Arduino, C/C++, LabVIEW}}
+	%\end{itemize}
+
+    %\ressubheading{Research Opportunity Program: Game Design }{}{Research Assistant (supervisor: Steve Engels)}{May 2015 - Sep 2015}
+	%\begin{itemize} \vspace{-\topsep}
+ %\setlength{\parskip}{0pt}
+  %  \setlength{\itemsep}{0pt plus 1pt}
+   % \resitem{Used C\# and Unity3D to program a multi-level 3D game aimed at teaching tree traversal algorithm BFS and DFS.}
+	%\end{itemize}
+
+
+
+\resheading{Education}
+\ressubheading{University of Toronto}{Honors B.Sc. Computer Science}{}{2014 - 2019}
+
+
+
+
+
+
+\resheading{Technologies}
+\vspace{2pt}
+
+\textbf{Languages:}  Python, C, C++, CUDA, Java, SQL, Typescript \\
+\textbf{ML \& Performance:} PyTorch, DDP/FSDP, ONNX, vLLM, Flash Attention, MLIR \\
+\textbf{Tools:} perf, gdb, gprof, valgrind, nvidia-smi, Git \\
+\textbf{Hardware:} NVIDIA GPU, Qualcomm Adreno GPU, Hexagon DSP, Intel FPGA \\
+\textbf{Infrastructure:} AWS (ECS, Lambda, DDB, EC2, EKS, Cloudformation), Docker
+
+%\resheading{Awards}
+%	\begin{tabular*}{7in}{l@{\extracolsep{\fill}}r}
+%		Recognition for Exceptional Performance at Intel Corporation (\$1,000) & 2018 \\
+%		CL. Burton Open Scholarship (\$250) & 2015\\
+%        Dean's Honours List & 2015 \\
+%        3rd Place in CS Pong AI Competition & 2015\\
+%        Outstanding Achievement Award for CSC165 & 2015 \\
+%        4th Place FIRST Robotics Regionals Shanghai & 2014 \\
+%\end{tabular*}
+
+\end{document}
+

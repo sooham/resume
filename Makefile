@@ -1,7 +1,8 @@
 TEX = xelatex
 SRC = main.tex
 DATE := $(shell date +%Y-%m-%d)
-OUT = main-$(DATE).pdf
+BASE = $(basename $(SRC))
+OUT = $(BASE)-$(DATE).pdf
 
 # Add MacTeX to PATH if installed but not yet on PATH
 export PATH := /Library/TeX/texbin:$(PATH)
@@ -10,13 +11,13 @@ export PATH := /Library/TeX/texbin:$(PATH)
 
 all: $(OUT)
 
-$(OUT): $(SRC) shading.sty
-	$(TEX) -interaction=nonstopmode $(SRC)
-	$(TEX) -interaction=nonstopmode $(SRC)
-	mv main.pdf $(OUT)
+%-$(DATE).pdf: %.tex shading.sty
+	$(TEX) -interaction=nonstopmode $<
+	$(TEX) -interaction=nonstopmode $<
+	mv $(basename $<).pdf $@
 
 clean:
-	rm -f main.aux main.log main.out main.pdf main-*.pdf
+	rm -f *.aux *.log *.out *.pdf
 
 install:
 	brew install --cask mactex-no-gui
