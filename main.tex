@@ -1,0 +1,285 @@
+% resume.tex
+% The older version of this resume is stored in Overleaf for rafizsooham@gmail.com
+
+\documentclass[letterpaper,10pt]{article}
+
+%-----------------------------------------------------------
+%Margin setup
+
+\setlength{\voffset}{-0.0in}
+
+\setlength{\paperwidth}{8.5in}
+\setlength{\paperheight}{11in}
+
+\setlength{\headheight}{0in}
+\setlength{\headsep}{-0.5in}
+
+\setlength{\textheight}{12in}
+\setlength{\textheight}{9.5in}
+
+\setlength{\topmargin}{-0.30in}
+\setlength{\textwidth}{7in}
+
+\setlength{\topskip}{0in}
+
+\setlength{\oddsidemargin}{-0.25in}
+\setlength{\evensidemargin}{-0.25in}
+
+%-----------------------------------------------------------
+%\usepackage{fullpage}
+\usepackage{shading}
+\usepackage{xcolor}
+\usepackage[colorlinks = true,
+            linkcolor = blue,
+            urlcolor  = blue,
+            citecolor = blue,
+            anchorcolor = blue]{hyperref}
+%\textheight=9.0in
+\pagestyle{empty}
+\raggedbottom
+\raggedright
+\setlength{\tabcolsep}{0in}
+
+\usepackage{xeCJK}
+\setCJKmainfont{Songti SC}  % macOS Song-style font (SimSun equivalent)
+
+%-----------------------------------------------------------
+%Custom commands
+\newcommand{\resitem}[1]{\item #1 \vspace{0pt}}
+
+\newcommand{\resheading}[1]{{\textbf{\Large{#1} \vphantom{p\^{E}}}\vspace{7pt}}}
+
+\newcommand{\ressubheading}[4]{
+\begin{tabular*}{7in}{l@{\extracolsep{\fill}}r}
+		\textbf{#1} #2 & \textit{#4} \\
+\end{tabular*}\vspace{0pt}}
+
+\newcommand{\resprojectsubheading}[2]{
+\begin{tabular*}{7in}{l@{\extracolsep{\fill}}r}
+        \textbf{#1} & \textit{#2} \\
+\end{tabular*}\vspace{0pt}}
+
+\newcommand{\MYhref}[3][blue]{\href{#2}{\color{#1}{\underline{#3}}}}%
+%-----------------------------------------------------------
+
+
+
+
+
+
+
+\begin{document}
+
+\begin{tabular*}{7in}{l@{\extracolsep{\fill}}r}
+\textbf{\Huge Sooham Rafiz} & \large{+1 (647) 876-6256} \\
+        \large{Portfolio: \MYhref{https://www.soohamurai.com}{www.soohamurai.com}}  &  \large{\textbf{rafizsooham@gmail.com}} \\
+\end{tabular*}
+
+\vspace{10pt}
+
+
+\ressubheading{Career Break}{Independent Researcher and Study @ Fudan Univeristy}{}{Jul 2025 - Present}
+\begin{itemize} \vspace{-\topsep}
+\setlength{\parskip}{0pt}
+\setlength{\itemsep}{0pt}
+\resitem{Took career break following significant investment gains, enabling focus on research interests and extended stay in Shanghai, China studying Chinese and Physics. Reached HSK level 5 in Shanghai. 我在复旦学中文和物理, 都是因为好奇。达到HSK五级水平。} 
+\resitem{Replicated and Extended (Noroozizdeh et. al) paper "Deep sequence models tend to memorize geometrically; it is unclear why." \href{https://github.com/sooham/pathstar-geometric-learning}{Blog post}}
+\resitem{Practical research into Pathstar optimization with memmap and sorting techniques. \href{https://soohamurai.com/2025/11/09/practical-memmap-and-sort-on-pathstar/}{Blog post}}
+\resitem{Self-teaching: Quantum Physics, Classical Mechanics.}
+\resitem{Performance optimization projects on cache line investigation, CUDA, kernel optimization. \href{https://soohamurai.com/2026/01/31/Measuring-Cache-Hierarchy-on-Apple-M4/}{Blog post on Apple M4 cache hierarchy}}
+\end{itemize}
+\ressubheading{Short Story (YC'20)}{Senior Software Engineer / ML Engineer}{}{Apr 2024 - Jul 2025}
+	\begin{itemize} \vspace{-\topsep}
+    \setlength{\parskip}{0pt}
+    \setlength{\itemsep}{0pt}
+    \resitem{Leveraged open-source vision language model cogVLM-17B + LoRA with propriety data to train, validate, test and deploy fine-tuned fashion cataloging and embedding utilities used throughout company - used for automated cataloging of inventory. F1 score of 0.861 and accuracy of 88\% on confusion matrix.} 
+    \resitem{Designed and implemented a ShipmentEngine utilized by merchandising team to track, bid and purchase 100k+ inbound and outbound shipments between company and vendors.}
+    \resitem{Saved 1.8 million USD per annum in freight costs by switching away from USPS to Pitney Bowes E-commerce platform. Spearheaded the technology and engineering for transition for Customers, Customer Support and Warehouse Operations.}
+    \resitem{Designed an in-house cycle-counting and supporting data ingestion pipelines to eliminate all inactive warehouse zones and improve inventory count accuracy.}
+    \resitem{\textsl{\textbf{Utilized:} Pytorch, DDP, Postgres, Typescript, React, AWS, Retool, Falcon, Heroku, Python}}
+    \end{itemize}
+    \ressubheading{Amazon}{Software Development Engineer II - Payments Team}{}{December 2021 - Nov 2023}
+	\begin{itemize} \vspace{-\topsep}
+    \setlength{\parskip}{0pt}
+    \setlength{\itemsep}{0pt}
+    \resitem{Developed real-time Unpaid Time value algorithm and infrastructure for Germany - moving away from batched 3rd party vendor dependency used previously. Speed up by a factor of 1000. Deployed to 2 million warehouse associates.}
+    \resitem{Cross-functionally led the development of a cutting-edge timesheet analysis software for 1k daily workers in Puerto Rico Amazon Logistic Center.}
+    \resitem{Developed a new model of computation for missed meal payment, significantly reducing overpayment when warehouse associates miss meal breaks.}
+    \resitem{Mentored engineers, wrote a portfolio of team specific onboarding documentation, videos tutorials for future customers and new-hires and operational efficiency.}
+    \resitem{\textsl{\textbf{Utilized:} Python, Java, AWS ECS, AWS DDB, Lambda, CloudWatch, Cloudformation, CDK}}
+     \end{itemize}
+\ressubheading{Qualcomm}{Machine Learning Acceleration Engineer}{}{July 2019 - August 2021}
+	\begin{itemize} \vspace{-\topsep}
+    \setlength{\parskip}{0pt}
+    \setlength{\itemsep}{0pt}
+    \resitem{Built a python compiler to convert JSON denominated computational graphs to standardized ONNX graphs which supported Qualcomm proprietary kernels for Layer fusion, vector precision adjustment.
+    }
+    \resitem{
+     Developed an end-to-end CI/CD ML test pipeline and performance dashboard to test model quantization on 100+ vision model families (Inceptionv3, MobileNet, YOLO etc.) the dashboard profiled timing, memory footprint and quantization error across multiple target hardware devices and tensor types (quantized and dequantized).
+     }
+    \resitem{Implemented a static quantization library to quantize floating-point neural network inputs and weights before inference for SnapDragon Neural Processor firmware.}
+    \resitem{Reduced memory footprint of common operators such as Convolution, Argmax etc compiled binaries.}
+    \resitem{\textsl{\textbf{Utilized:} C, Python, Pytorch, ONNX, Qualcomm Hexagon SDK, MLIR}}
+    \end{itemize}
+    
+
+        \ressubheading{Intel Corporation}{Deep Learning Acceleration Engineer (Intern)}{}{Jun 2018 - Aug 2018}
+	\begin{itemize} \vspace{-\topsep}
+    \setlength{\parskip}{0pt}
+    \setlength{\itemsep}{0pt plus 1pt}
+        \resitem{Reduced OpenVINO (a deep learning framework) compile time for CNN models by upto 24 hours using caching optimizations.}
+    \resitem{Reduced compile time for building deep convolutional models in regression tests by caching intermediary C object files, libaries and configurations to a Python server, decreasing test time by 16 hours and improving test repeatability.}
+    \resitem{Migrated Intel's deep learning framework used by 50+ developers across backwards incompatible updates to development and production environment, sustaining team productivity.}
+    \resitem{\textsl{\textbf{Utilized:}  C++, Python, OpenVINO, OpenCL }}
+	\end{itemize}
+
+
+    \ressubheading{Intel Corporation}{FPGA Development Engineer (Intern)}{}{Jun 2017 - May 2018}
+	\begin{itemize} \vspace{-\topsep}
+    \setlength{\parskip}{0pt}
+    \setlength{\itemsep}{0pt plus 1pt}
+	%\resitem{Developer for FPGA LDPC codec compatible with 3rd Generation Partnership Project (3GPP) standard of 5G cellular communication.}
+	%\resitem{Developed the library for packaging, Quartus synthesis integrations, and user interface for aforementioned LDPC module.}
+            \resitem{Created a comprehensive user interface and packaging system using Perl and Tcl, allowing parameter customization, code encryption and code generation. Used in production by multiple customers.}
+    \resitem{Built a C++ client and server to query field-programmable gate array (FPGA) registers. This was accomplished by sending Direct Memory Access and Memory Mapped IO requests to FPGA workstations.}
+	\resitem{Added FPGA hardware support to Intel's digital signal library by implementing C++ middleware.}
+	%\resitem{Improved FPGA IP user documentation through meetings with customers and technical editors.}
+	%\resitem{Revised user documentation based on feedback from customers, leading to increased software usability.}
+	%\resitem{Programmed an embedded serial command interface and memory peek/poke utilities.}
+
+    \resitem{\textsl{\textbf{Utilized:}  C++, Perl, Tcl, Quartus, Verilog}}
+	\end{itemize}
+
+    %\ressubheading{Careerleaf Inc.}{}{Web Developer (Intern)}{Jun 2016 - Sep 2016}
+	%\begin{itemize} \vspace{-\topsep}
+    %\setlength{\parskip}{0pt}
+    %\setlength{\itemsep}{0pt plus 1pt}
+	%\resitem{Developed a job management and job listing module using AngularJS and Python backend, satisfying multiple client demands.}
+    %\resitem{Reduced redundancy of SQL database by converting schema to Boyce-Codd Normal Form, reducing database size by 80,0000 entries.}
+	%\resitem{Worked with a development team using SCRUM software development framework.}
+	%\end{itemize}
+    %\ressubheading{University of Toronto Aerospace Team}{Toronto, ON}{Avionics Engineer (Club member)}{Sep 2016 - May 2017}
+	%\begin{itemize} \vspace{-\topsep}
+    %\setlength{\parskip}{0pt}
+    %\setlength{\itemsep}{0pt plus 1pt}
+
+	%\resitem{Provided accurate estimation of altitude of rocket nose-cone by implementing a Kalman filter algorithm.}
+	%\resitem{Programmed control software to communicate between ground station and the rocket.}
+	%\resitem{Helped fellow team-members perform cold-flow and firing tests of the rocket motor.}
+    %\resitem{\textsl{\textbf{Utilized:} Arduino, C/C++, LabVIEW}}
+	%\end{itemize}
+
+    %\ressubheading{Research Opportunity Program: Game Design }{}{Research Assistant (supervisor: Steve Engels)}{May 2015 - Sep 2015}
+	%\begin{itemize} \vspace{-\topsep}
+ %\setlength{\parskip}{0pt}
+  %  \setlength{\itemsep}{0pt plus 1pt}
+   % \resitem{Used C\# and Unity3D to program a multi-level 3D game aimed at teaching tree traversal algorithm BFS and DFS.}
+	%\end{itemize}
+
+
+
+\resheading{Education}
+\ressubheading{University of Toronto}{Honors B.Sc. Computer Science}{}{2014 - 2019}
+
+
+
+
+
+
+
+
+
+\resheading{Projects}
+% \resprojectsubheading{\textbf{\MYhref{https://github.com/sooham/gba-emulator}{ARM7TDMI Microprocessor Emulator}}}{July 2021 - Present}
+%	\begin{itemize} \vspace{-\topsep}
+%    \setlength{\parskip}{0pt}
+ %   \setlength{\itemsep}{0pt plus 1pt}
+	
+   % \resitem{Implemented a ARMv4 CPU (Gameboy Advance, iPod) with a  4-stage pipeline with User Mode, Fast Interrupt Requests (FIQ) and regular %interrupt requests (IRQ) and 37 registers. Implemented in Verilog 2001.}
+%	\end{itemize}
+
+
+
+   \resprojectsubheading{\textbf{\MYhref{https://sooham.github.io/2019/05/28/Counting-efficiently-at-scale-using-HyperLogLog/}{Hyperloglog Cardinality Estimator}}}{May 2019}
+	\begin{itemize} \vspace{-\topsep}
+    \setlength{\parskip}{0pt}
+    \setlength{\itemsep}{0pt plus 1pt}
+    \resitem{Compiled C++ HyperLogLog randomized algorithm used for efficient cardinality estimation.}
+    \end{itemize}
+
+
+  %  \resprojectsubheading{\textbf{Im2latex}}{Nov 2018 - Dec 2018}
+%	\begin{itemize} \vspace{-\topsep}
+ %   \setlength{\parskip}{0pt}
+  %  \setlength{\itemsep}{0pt plus 1pt}
+  %  \resitem{Utilized Python and Tensorflow to implement a Seq2seq LSTM model on CNN features to translate images into valid LaTeX expressions. Obtained great accuracy of \textbf{70.16\%} on test set.}
+%	\end{itemize}
+
+
+    %\resprojectsubheading{\textbf{Computer Graphics Kinematics Project}}{Nov 2018 - Dec 2018}
+	%\begin{itemize} \vspace{-\topsep}
+    %\setlength{\parskip}{0pt}
+    %\setlength{\itemsep}{0pt plus 1pt}
+	
+    %\resitem{Designed end-effector manipulation algorithms for 3D skeletons. Implemented Linear Blend Skinning. Utilized knowledge of 3D matrix transformations and linear algebra. Implemented in C++.}
+	%\resitem{Implemented Linear Blend Skinning algorithms for skin/surface meshes.}
+	%\end{itemize}
+
+
+	%\ressubheading{Variational Auto-Encoder for Image Segmentation}{}{CSC 412}{Aug. 2016 - Sep. 2016}
+
+
+   \resprojectsubheading{\textbf{\MYhref{https://github.com/sooham/inpainting}{Image Inpainting C++ Library}}}{June 2016 - Aug 2016}
+	\begin{itemize} \vspace{-\topsep}
+    \setlength{\parskip}{0pt}
+    \setlength{\itemsep}{0pt plus 1pt}
+
+    \resitem{Authored the only open-source implementation of Criminisi et. al's Inpainting algorithm in C++ as an online reference.}
+    \end{itemize}
+
+
+	%\begin{itemize}
+                    %\resitem{Graduated with Honors and Dean's List 2 out of 4 Years}
+		%\resitem{Relevant courses: 
+
+%                   Advanced Algorithms, Advanced Machine Learning, Computer Graphics, Computer Understanding, Embedded Systems Programming, Operating Systems, Probabilistic Reasoning and Understanding, Relational Databases, Web Development
+%                    }
+	%\end{itemize}
+
+%\item
+%        \ressubheading{Dulwich College Shanghai}{Shanghai, China}{International Baccalaureate (Grade: 88 \%) }{2012-2014}
+
+%
+%\vspace{2pt}
+\resheading{Technologies}
+\vspace{2pt}
+
+%\textbf{Languages:}  Python, C, C++, Verilog, Perl, AWK, Tcl, SQL, Javascript, HTML, CSS. \\
+%\textbf{Languages:}  Python, C, C++, Verilog, SQL, Javascript, HTML, CSS. \\
+\textbf{Languages:}  Python, Java, Ruby, SQL, Typescript, React, Node.js \\
+
+\textbf{Technologies:}
+AWS - DynamoDB, EC2, ECS, Lambda, EKS, Cloudformation, Git, NoSQL
+
+%%Tensorflow, Numpy, Scipy, Eigen, Matplotlib, Pytorch, OpenCV.
+
+%Node.js, Express.js, Angular.js, PostgreSQL, JDBC, Solr, Tornado.
+
+%Unity3d, Blender.
+%\quad \\
+%\textbf{Miscellaneous:} Strong at verbal and written communication. Good knowledge of data structures and algorithms 
+%
+\pagebreak
+
+%\resheading{Awards}
+%	\begin{tabular*}{7in}{l@{\extracolsep{\fill}}r}
+%		Recognition for Exceptional Performance at Intel Corporation (\$1,000) & 2018 \\
+%		CL. Burton Open Scholarship (\$250) & 2015\\
+%        Dean's Honours List & 2015 \\
+%        3rd Place in CS Pong AI Competition & 2015\\
+%        Outstanding Achievement Award for CSC165 & 2015 \\
+%        4th Place FIRST Robotics Regionals Shanghai & 2014 \\
+%\end{tabular*}
+
+\end{document}
+
