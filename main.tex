@@ -41,7 +41,9 @@
 \setlength{\tabcolsep}{0in}
 
 \usepackage{xeCJK}
-\setCJKmainfont{Songti SC}  % macOS Song-style font (SimSun equivalent)
+\IfFontExistsTF{Songti SC}
+  {\setCJKmainfont{Songti SC}}
+  {\setCJKmainfont{Noto Sans CJK SC}}
 
 %-----------------------------------------------------------
 %Custom commands
@@ -72,7 +74,7 @@
 
 \begin{tabular*}{7in}{l@{\extracolsep{\fill}}r}
 \textbf{\Huge Sooham Rafiz} & \large{+1 (647) 876-6256} \\
-        \large{Portfolio: \MYhref{https://www.soohamurai.com}{www.soohamurai.com}}  &  \large{\textbf{rafizsooham@gmail.com}} \\
+        \large{Portfolio: \MYhref{https://www.soohamurai.com}{www.soohamurai.com}}  &  \large{\textbf{soohamrafiz@gmail.com}} \\
 \end{tabular*}
 
 \vspace{10pt}
@@ -82,6 +84,7 @@
 \begin{itemize} \vspace{-\topsep}
 \setlength{\parskip}{0pt}
 \setlength{\itemsep}{0pt}
+\resitem{Built and scaled \MYhref{https://chat.runday.app/}{chat.runday.app}, a multi-tenant agentic platform with heavy Kubernetes usage, currently supporting 50 small businesses with automated agentic workflows.}
 \resitem{Took career break following significant investment gains, enabling focus on research interests and extended stay in Shanghai, China studying Chinese and Physics. Reached HSK level 5 in Shanghai. 我在复旦学中文和物理, 都是因为好奇。达到HSK五级水平。} 
 \resitem{Replicated and Extended (Noroozizdeh et. al) paper "Deep sequence models tend to memorize geometrically; it is unclear why." \href{https://github.com/sooham/pathstar-geometric-learning}{Blog post}}
 \resitem{Practical research into Pathstar optimization with memmap and sorting techniques. \href{https://soohamurai.com/2025/11/09/practical-memmap-and-sort-on-pathstar/}{Blog post}}
@@ -259,7 +262,7 @@
 \textbf{Languages:}  Python, Java, Ruby, SQL, Typescript, React, Node.js \\
 
 \textbf{Technologies:}
-AWS - DynamoDB, EC2, ECS, Lambda, EKS, Cloudformation, Git, NoSQL
+AWS - DynamoDB, EC2, ECS, Lambda, EKS, Cloudformation, Docker, k3s/Kubernetes, Git, NoSQL
 
 %%Tensorflow, Numpy, Scipy, Eigen, Matplotlib, Pytorch, OpenCV.
 
